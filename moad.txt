@@ -1,0 +1,47 @@
+ca-app-pub-8289120458141671~4175422183
+
+test add-->
+ca-app-pub-3940256099942544~3347511713
+Banner	ca-app-pub-3940256099942544/6300978111
+Interstitial	ca-app-pub-3940256099942544/1033173712
+-------------------------------------------------------------->end
+
+
+import androidx.annotation.NonNull;
+
+
+
+type	id
+Banner	ca-app-pub-3940256099942544/6300978111
+Interstitial	ca-app-pub-3940256099942544/1033173712
+Interstitial Video	ca-app-pub-3940256099942544/8691691433
+Rewarded Video	ca-app-pub-3940256099942544/5224354917
+AppOpen	ca-app-pub-3940256099942544/1033173712
+
+
+
+
+ionic cordova plugin add cordova-plugin-admob-free --save --variable ADMOB_APP_ID="ca-app-pub-8867310177954132~7727106610"  ionic cordova plugin add cordova-plugin-admob-free --save --variable ADMOB_APP_ID="ca-app-pub-2387490687776151~80XXXXXXX9"
+
+
+    <plugin name="cordova-plugin-admob-free" spec="0.22.0">
+        <variable name="ADMOB_APP_ID" value="ca-app-pub-8867310177954132~6559016713" />
+    </plugin>
+
+
+bejna
+
+    this.firestore.collection(this.emalvalue).add({
+      title: this.title,
+      completed: false
+    }).then(() => {
+      this.title = '';
+
+lena
+
+    this.firestore.collection(this.emalvalue).snapshotChanges().subscribe((todos) => {
+      this.todos = todos.map((t) => {
+          return { id: t.payload.doc.id, ...t.payload.doc.data() as {} };
+      });
+      console.log(this.todos);
+  });
