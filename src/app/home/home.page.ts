@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
   ngOnInit(){
     this.showInterstitialAd()
     this.showBannerAd()
-    alert('Please on Portrait')
+    alert('Please on Portrait device first')
   }
   showBannerAd() {
     const bannerConfig: AdMobFreeBannerConfig = {
