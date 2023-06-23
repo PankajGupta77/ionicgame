@@ -21,7 +21,7 @@ AppOpen	ca-app-pub-3940256099942544/1033173712
 
 
 
-ionic cordova plugin add cordova-plugin-admob-free --save --variable ADMOB_APP_ID="ca-app-pub-8867310177954132~7727106610"  ionic cordova plugin add cordova-plugin-admob-free --save --variable ADMOB_APP_ID="ca-app-pub-2387490687776151~80XXXXXXX9"
+ionic cordova plugin add cordova-plugin-admob-free --save --variable ADMOB_APP_ID="ca-app-pub-7954042482936232~6320679690"  ionic cordova plugin add cordova-plugin-admob-free --save --variable ADMOB_APP_ID="ca-app-pub-2387490687776151~80XXXXXXX9"
 
 
     <plugin name="cordova-plugin-admob-free" spec="0.22.0">
@@ -45,3 +45,6 @@ lena
       });
       console.log(this.todos);
   });
+
+
+http://localhost:8100/SafeValue%20must%20use%20[property]=binding:%20https://apixuat.torusprise.com/SuperApp/Insights/report?param1=value1&param2=value2%20(see%20https://g.co/ng/security#xss)

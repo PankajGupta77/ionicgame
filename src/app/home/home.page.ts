@@ -7,14 +7,14 @@ import { AdMobFree, AdMobFreeBannerConfig,AdMobFreeInterstitialConfig,AdMobFreeR
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-
+  loading: boolean = true;
   constructor(private admobFree:AdMobFree) {
     this.showInterstitialAd()
   }
   ngOnInit(){
     this.showInterstitialAd()
     this.showBannerAd()
-    alert('Please on Portrait device first')
+    // alert('Please on Portrait device first')
   }
   showBannerAd() {
     const bannerConfig: AdMobFreeBannerConfig = {
@@ -38,4 +38,8 @@ export class HomePage implements OnInit {
       // interstitial ad is ready to be displayed
     }).catch((e) => console.log(e));
   }
+  onIframeLoad() {
+    this.loading = false;
+  }
+  
 }
