@@ -18,7 +18,7 @@ export class HomePage implements OnInit {
   }
   showBannerAd() {
     const bannerConfig: AdMobFreeBannerConfig = {
-      id: 'ca-app-pub-7954042482936232/2741183872',
+      id: 'ca-app-pub-7954042482936232/9452612635',
       isTesting: false,
       autoShow: true,
     };
@@ -29,7 +29,7 @@ export class HomePage implements OnInit {
   }
   showInterstitialAd() {
     const interstitialConfig: AdMobFreeInterstitialConfig = {
-      id: 'ca-app-pub-7954042482936232/4841529761',
+      id: 'ca-app-pub-7954042482936232/3128561643',
       autoShow: true,
       isTesting: false
     };
@@ -40,6 +40,25 @@ export class HomePage implements OnInit {
   }
   onIframeLoad() {
     this.loading = false;
+    this.showRewardedVideoAd()
+  }
+  showRewardedVideoAd() {
+    // AdMob Rewarded Video Ad Unit ID
+    const adUnitId = 'ca-app-pub-7954042482936232/8885065600';
+  
+    // Initialize AdMob
+    this.admobFree.rewardVideo.config({
+      id: adUnitId,
+      isTesting: false, // Set to true during testing
+      autoShow: true
+    });
+  
+    // Show the Rewarded Video Ad
+    this.admobFree.rewardVideo.prepare().then(() => {
+      console.log('Rewarded Video Ad is ready');
+    }).catch((error) => {
+      console.log('Failed to prepare Rewarded Video Ad', error);
+    });
   }
   
 }
