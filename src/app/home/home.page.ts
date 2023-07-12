@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdMobFree, AdMobFreeBannerConfig,AdMobFreeInterstitialConfig,AdMobFreeRewardVideoConfig} from '@ionic-native/admob-free/ngx';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +9,22 @@ import { AdMobFree, AdMobFreeBannerConfig,AdMobFreeInterstitialConfig,AdMobFreeR
 })
 export class HomePage implements OnInit {
   loading: boolean = true;
-  constructor(private admobFree:AdMobFree) {
-    this.showInterstitialAd()
+  constructor(private admobFree:AdMobFree,private platform: Platform) {
+   
   }
   ngOnInit(){
     this.showInterstitialAd()
     this.showBannerAd()
     // alert('Please on Portrait device first')
   }
+  ionViewDidEnter() {
+    this.platform.ready().then(() => {
+      this.showInterstitialAd();
+    });
+  }
   showBannerAd() {
     const bannerConfig: AdMobFreeBannerConfig = {
-      id: 'ca-app-pub-7954042482936232/2741183872',
+      id: 'ca-app-pub-7954042482936232/5086474717',
       isTesting: false,
       autoShow: true,
     };
@@ -29,7 +35,7 @@ export class HomePage implements OnInit {
   }
   showInterstitialAd() {
     const interstitialConfig: AdMobFreeInterstitialConfig = {
-      id: 'ca-app-pub-7954042482936232/4841529761',
+      id: 'ca-app-pub-7954042482936232/7459101580',
       autoShow: true,
       isTesting: false
     };
@@ -39,7 +45,9 @@ export class HomePage implements OnInit {
     }).catch((e) => console.log(e));
   }
   onIframeLoad() {
+    this.showInterstitialAd()
     this.loading = false;
   }
+  
   
 }
