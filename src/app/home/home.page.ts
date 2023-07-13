@@ -35,7 +35,7 @@ export class HomePage implements OnInit {
   }
   showInterstitialAd() {
     const interstitialConfig: AdMobFreeInterstitialConfig = {
-      id: 'ca-app-pub-7954042482936232/7459101580',
+      id: 'ca-app-pub-7954042482936232/1707440829',
       autoShow: true,
       isTesting: false
     };
