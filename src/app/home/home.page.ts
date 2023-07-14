@@ -24,7 +24,7 @@ export class HomePage implements OnInit {
   }
   showBannerAd() {
     const bannerConfig: AdMobFreeBannerConfig = {
-      id: 'ca-app-pub-7954042482936232/5086474717',
+      id: '',
       isTesting: false,
       autoShow: true,
     };
@@ -34,15 +34,15 @@ export class HomePage implements OnInit {
     });
   }
   showInterstitialAd() {
-    const interstitialConfig: AdMobFreeInterstitialConfig = {
-      id: 'ca-app-pub-7954042482936232/1707440829',
-      autoShow: true,
-      isTesting: false
-    };
-    this.admobFree.interstitial.config(interstitialConfig);
-    this.admobFree.interstitial.prepare().then(() => {
-      // interstitial ad is ready to be displayed
-    }).catch((e) => console.log(e));
+    // const interstitialConfig: AdMobFreeInterstitialConfig = {
+    //   id: 'ca-app-pub-7954042482936232/1707440829',
+    //   autoShow: true,
+    //   isTesting: false
+    // };
+    // this.admobFree.interstitial.config(interstitialConfig);
+    // this.admobFree.interstitial.prepare().then(() => {
+    //   // interstitial ad is ready to be displayed
+    // }).catch((e) => console.log(e));
   }
   onIframeLoad() {
     this.showInterstitialAd()
