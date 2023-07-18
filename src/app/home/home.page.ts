@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
   }
   ngOnInit(){
     this.showInterstitialAd()
-    this.showBannerAd()
+    // this.showBannerAd()
     // alert('Please on Portrait device first')
   }
   ionViewDidEnter() {
@@ -35,7 +35,7 @@ export class HomePage implements OnInit {
   }
   showInterstitialAd() {
     const interstitialConfig: AdMobFreeInterstitialConfig = {
-      id: 'ca-app-pub-7954042482936232/7459101580',
+      id: 'ca-app-pub-7954042482936232/3632526897',
       autoShow: true,
       isTesting: false
     };
@@ -45,7 +45,7 @@ export class HomePage implements OnInit {
     }).catch((e) => console.log(e));
   }
   onIframeLoad() {
-    this.showInterstitialAd()
+ 
     this.loading = false;
   }
   
