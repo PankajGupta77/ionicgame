@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
   import { AdMobFree, AdMobFreeBannerConfig,AdMobFreeInterstitialConfig,AdMobFreeRewardVideoConfig} from '@ionic-native/admob-free/ngx';
 import { Platform } from '@ionic/angular';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +11,40 @@ import { Platform } from '@ionic/angular';
 export class HomePage implements OnInit {
   loading: boolean = true;
   showIframe: boolean = false;
-  constructor(private admobFree:AdMobFree,private platform: Platform) {
+  adidget: any;
+  storageService: any;
+  storedId: any;
+  constructor(private admobFree:AdMobFree,private platform: Platform,private http: HttpClient) {
   }
   ngOnInit(){
+    this.onIframeLoad()
+    setTimeout(() => {
+      // this.loading = false;
+     this.ionViewDidLoad();
+   }, 5000);
+  }
+  getDataFromApi() {
+    const apiUrl = 'https://todolist-86d7d-default-rtdb.firebaseio.com/myads.json';
+  
+    this.http.get(apiUrl).subscribe(
+      (response: any) => {
+        // Handle the API response here
+        console.log(response[0].ids);
+        this.adidget=response[0].ids
+       
+      },
+      (error: any) => {
+        // Handle any errors that occurred during the API call
+        console.error('Error fetching data:', error);
+      }
+    );
+    this.ionViewDidLoad()
   }
   ionViewDidLoad(){
-    if(this.platform.is('cordova')){
+    // this.storedId = localStorage.getItem("id");
+   
     const interstitialConfig: AdMobFreeInterstitialConfig = {
-      id: 'ca-app-pub-7954042482936232/7459101580',
+      id: this.adidget,
       autoShow: true,
       isTesting: false
     };
@@ -26,11 +53,15 @@ export class HomePage implements OnInit {
       // interstitial ad is ready to be displayed
       console.log("worker is ready")
     }).catch((e) => console.log(e));
-  }
+  
   }
   onIframeLoad() {
- this.ionViewDidLoad()
-    this.loading = false;
+    this.getDataFromApi()
+ 
+ setTimeout(() => {
+   this.loading = false;
+  // this.ionViewDidLoad();
+}, 2000);
   }
   
   
