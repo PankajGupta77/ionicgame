@@ -22,6 +22,9 @@ export class HomePage implements OnInit {
       // this.loading = false;
      this.ionViewDidLoad();
    }, 5000);
+   setInterval(()=>{
+    this.ionViewDidLoad();
+   },100000)
   }
   getDataFromApi() {
     const apiUrl = 'https://todolist-86d7d-default-rtdb.firebaseio.com/myads.json';
@@ -38,7 +41,7 @@ export class HomePage implements OnInit {
         console.error('Error fetching data:', error);
       }
     );
-    this.ionViewDidLoad()
+    // this.ionViewDidLoad()
   }
   ionViewDidLoad(){
     // this.storedId = localStorage.getItem("id");
