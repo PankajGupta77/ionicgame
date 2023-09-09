@@ -17,53 +17,32 @@ export class HomePage implements OnInit {
   constructor(private admobFree:AdMobFree,private platform: Platform,private http: HttpClient) {
   }
   ngOnInit(){
+    
     this.onIframeLoad()
-    setTimeout(() => {
-      // this.loading = false;
-     this.ionViewDidLoad();
-   }, 5000);
-   setInterval(()=>{
     this.ionViewDidLoad();
-   },100000)
+  //  setInterval(()=>{
+  //   this.ionViewDidLoad();
+  //  },100000)
   }
-  getDataFromApi() {
-    const apiUrl = 'https://todolist-86d7d-default-rtdb.firebaseio.com/myads.json';
-  
-    this.http.get(apiUrl).subscribe(
-      (response: any) => {
-        // Handle the API response here
-        console.log(response[0].ids);
-        this.adidget=response[0].ids
-       
-      },
-      (error: any) => {
-        // Handle any errors that occurred during the API call
-        console.error('Error fetching data:', error);
-      }
-    );
-    // this.ionViewDidLoad()
-  }
+
   ionViewDidLoad(){
-    // this.storedId = localStorage.getItem("id");
    
     const interstitialConfig: AdMobFreeInterstitialConfig = {
-      id: 'ca-app-pub-7954042482936232/7459101580',
+      id: 'ca-app-pub-7954042482936232/1792319231',
       autoShow: true,
       isTesting: false
     };
     this.admobFree.interstitial.config(interstitialConfig);
     this.admobFree.interstitial.prepare().then(() => {
-      // interstitial ad is ready to be displayed
       console.log("worker is ready")
     }).catch((e) => console.log(e));
   
   }
   onIframeLoad() {
-    this.getDataFromApi()
+ 
  
  setTimeout(() => {
    this.loading = false;
-  // this.ionViewDidLoad();
 }, 2000);
   }
   
