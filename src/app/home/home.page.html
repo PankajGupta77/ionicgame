@@ -1,6 +1,15 @@
 <div *ngIf="loading">Please wait...</div>
-<iframe id="game" frameborder="0" allow="autoplay" allowfullscreen="" seamless="" scrolling="no" 
+<!-- <iframe id="game" frameborder="0" allow="autoplay" allowfullscreen="" seamless="" scrolling="no" 
         src="https://html5.gamedistribution.com/rvvASMiM/a28b70925f134b68b1760fa15fa3f87e/"
-        height="100vh" width="100%" (load)="onIframeLoad()"></iframe>
+        height="100vh" width="100%" (load)="onIframeLoad()"></iframe> -->
 <!-- https://www.htmlgames.com/html5-games-for-your-site/ -->
 
+<iframe id="game-iframe"
+ src="https://games.crazygames.com/en_US/ragdoll-archers/index.html"
+  scrolling="no" allow="autoplay; payment; fullscreen; microphone;
+   focus-without-user-activation *; screen-wake-lock; gamepad; clipboard-read;
+    clipboard-write; " allowfullscreen="" sandbox="allow-forms allow-modals
+     allow-orientation-lock allow-pointer-lock allow-presentation allow-scripts
+      allow-same-origin allow-downloads allow-popups" loading="eager"
+  data-hj-allow-iframe="true" style="
+  width: 100%;height: -webkit-fill-available"></iframe>
