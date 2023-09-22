@@ -74,7 +74,7 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-admob-free": {
-        "ADMOB_APP_ID": "ca-app-pub-3940256099942544~1194726897",
+        "ADMOB_APP_ID": "ca-app-pub-8399658876994548~2361490407",
         "PLAY_SERVICES_VERSION": "19.3.0"
       },
       "cordova-plugin-statusbar": {},

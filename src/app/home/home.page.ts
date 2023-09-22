@@ -19,7 +19,7 @@ export class HomePage implements OnInit {
   ngOnInit(){
     
     this.onIframeLoad()
-    this.ionViewDidLoad();
+   
   //  setInterval(()=>{
   //   this.ionViewDidLoad();
   //  },100000)
@@ -28,7 +28,7 @@ export class HomePage implements OnInit {
   ionViewDidLoad(){
    
     const interstitialConfig: AdMobFreeInterstitialConfig = {
-      id: 'ca-app-pub-7954042482936232/9505257915',
+      id: 'ca-app-pub-8399658876994548/1766594035',
       autoShow: true,
       isTesting: false
     };
@@ -43,6 +43,8 @@ export class HomePage implements OnInit {
  
  setTimeout(() => {
    this.loading = false;
+   this.ionViewDidLoad();
+   alert("rotate_Your_Device_📲")
 }, 2000);
   }
   

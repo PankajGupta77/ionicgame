@@ -4,12 +4,20 @@
         height="100vh" width="100%" (load)="onIframeLoad()"></iframe> -->
 <!-- https://www.htmlgames.com/html5-games-for-your-site/ -->
 
-<iframe id="game-iframe"
- src="https://games.crazygames.com/en_US/ragdoll-archers/index.html"
+<!-- <iframe id="game-iframe"
+ src="https://www.crazygames.com/game/ragdoll-archers"
   scrolling="no" allow="autoplay; payment; fullscreen; microphone;
    focus-without-user-activation *; screen-wake-lock; gamepad; clipboard-read;
     clipboard-write; " allowfullscreen="" sandbox="allow-forms allow-modals
      allow-orientation-lock allow-pointer-lock allow-presentation allow-scripts
       allow-same-origin allow-downloads allow-popups" loading="eager"
   data-hj-allow-iframe="true" style="
-  width: 100%;height: -webkit-fill-available"></iframe>
+  width: 100%;height: -webkit-fill-available"></iframe> -->
+  <iframe (load)="onIframeLoad()" id="game-iframe" src="https://files.crazygames.com/ragdoll-archers/10/index.html" allow=" autoplay; payment; fullscreen; microphone; clipboard-read; clipboard-write 'self' https://files.crazygames.com/ragdoll-archers/10/index.html" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allowfullscreen="true" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-scripts allow-same-origin allow-downloads" style="border: 0px; background-color: rgb(255, 255, 255); width: 10px; height: 10px; min-width: 100%; min-height: 100%;"></iframe>
+
+  <!-- <iframe id="game" allow="accelerometer; gyroscope;" style="
+  height: -webkit-fill-available;"
+   data-allowed-origins="[&quot;https://app-228729.games.s3.yandex.net&quot;,&quot;https://yandex.com&quot;]"
+    id="game-frame" name="1695119947249618-4297079088616843206-balancer-l7leveler-kubr-yp-vla-115-BAL"
+     src="https://app-228729.games.s3.yandex.net/228729/krwnq24b8gsel573s7dwnifwwjllwwg8/index.html?sdk=https%3A%2F%2Fyandex.com%2Fgames%2Fsdk%2Fv2#origin=https%3A%2F%2Fyandex.com&amp;expBoxesCrypted=vU8OG5mZu3RqFeb6PbVb33cwbICT5UWM746nOzqMmZOXOUcvT1nOQNMQEAi-I_F-xaJAKrKdpnPps84lynGu_brY3dd3ujR-YUxvu5qnPvaDMBRaQirgYg%2C%2C&amp;experiments=%7B%22invalidate_games_cache_from%22%3A1675149357%2C%22adaptive_feed%22%3Atrue%2C%22early_show_shortcut_popup%22%3Atrue%2C%22prebid_block_placeholder%22%3Atrue%2C%22prebid_block_loader%22%3Atrue%2C%22prebid_block_controls_delay%22%3A5000%2C%22pick_ec%22%3A%22advm_ec2%22%2C%22adv_sticky_banner_batched%22%3Atrue%2C%22adv_sticky_banner_retries%22%3A2%2C%22disable_weekly_activity_bonus%22%3Atrue%2C%22similar_games%22%3Atrue%2C%22client_tech_log%22%3Atrue%2C%22enable_desktop_visibilitychange_shortcut%22%3Atrue%2C%22count_desktop_visibilitychange_shortcut%22%3A3%2C%22period_desktop_visibilitychange_shortcut%22%3A604800000%2C%22new_adv_manager%22%3A%22prebid_admanager%22%2C%22catalog_gpt_banner_type%22%3A%22wide%22%2C%22prebid_catalog_adv%22%3Afalse%2C%22search_v3%22%3A%22mix%22%2C%22game_hook_alert%22%3Atrue%2C%22splash_screen_time_limit%22%3A20000%2C%22splash_screen_condition%22%3A%22game%22%2C%22guard_under_splash_screen%22%3Atrue%2C%22prebid_disabled_bids%22%3A%5B%22cpmstar%22%5D%2C%22dj_experiment_param%22%3A%2226%22%2C%22game_icon_type%22%3A%22B%22%2C%22google_gdpr%22%3Atrue%7D&amp;app-id=228729">
+</iframe> -->
