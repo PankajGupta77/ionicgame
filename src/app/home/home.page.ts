@@ -18,28 +18,9 @@ export class HomePage implements OnInit {
   }
   ngOnInit(){
     this.onIframeLoad()
-    setTimeout(() => {
-      // this.loading = false;
-     this.ionViewDidLoad();
-   }, 5000);
+   
   }
-  getDataFromApi() {
-    const apiUrl = 'https://todolist-86d7d-default-rtdb.firebaseio.com/myads.json';
-  
-    this.http.get(apiUrl).subscribe(
-      (response: any) => {
-        // Handle the API response here
-        console.log(response[0].ids);
-        this.adidget=response[0].ids
-       
-      },
-      (error: any) => {
-        // Handle any errors that occurred during the API call
-        console.error('Error fetching data:', error);
-      }
-    );
-    this.ionViewDidLoad()
-  }
+ 
   ionViewDidLoad(){
     // this.storedId = localStorage.getItem("id");
    
@@ -56,7 +37,7 @@ export class HomePage implements OnInit {
   
   }
   onIframeLoad() {
-    this.getDataFromApi()
+    this.ionViewDidLoad()
  
  setTimeout(() => {
    this.loading = false;
