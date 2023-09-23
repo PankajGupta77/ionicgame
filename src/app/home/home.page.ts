@@ -40,10 +40,10 @@ export class HomePage implements OnInit {
   }
   onIframeLoad() {
  
- 
+    this.ionViewDidLoad();
  setTimeout(() => {
    this.loading = false;
-   this.ionViewDidLoad();
+   
    alert("rotate_Your_Device_📲")
 }, 2000);
   }

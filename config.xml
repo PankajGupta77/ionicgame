@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.Ragdoll.Archers" version="0.0.7" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.Ragdoll.Archers" version="0.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Ragdoll Archers</name>
     <description>hello my team .</description>
     <author email="pg007135@gmail@gmail.com" href="https://siteplayerbrowser.blogspot.com/">developer  Team</author>
@@ -100,7 +100,7 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^5.0.0" />
     <plugin name="cordova-plugin-admob-free" spec="19.3.0">
-        <variable name="ADMOB_APP_ID" value="ca-app-pub-8399658876994548~2361490407" />
+        <variable name="ADMOB_APP_ID" value="ca-app-pub-2833750103925166~3759639464" />
         <variable name="PLAY_SERVICES_VERSION" value="19.3.0" />
     </plugin>
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
