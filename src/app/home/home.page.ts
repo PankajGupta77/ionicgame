@@ -19,7 +19,7 @@ export class HomePage implements OnInit {
   ngOnInit(){
     
     this.onIframeLoad()
-    this.ionViewDidLoad();
+    
   //  setInterval(()=>{
   //   this.ionViewDidLoad();
   //  },100000)
@@ -42,6 +42,7 @@ export class HomePage implements OnInit {
  
  
  setTimeout(() => {
+  this.ionViewDidLoad();
    this.loading = false;
 }, 2000);
   }
