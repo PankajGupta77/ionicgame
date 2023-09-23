@@ -25,7 +25,7 @@ export class HomePage implements OnInit {
   //  setInterval(()=>{
     
   //  },100000)
-  this.ionViewDidLoad();
+ 
   }
  
   ionViewDidLoad(){
@@ -44,7 +44,7 @@ export class HomePage implements OnInit {
   
   }
   onIframeLoad() {
-    
+    this.ionViewDidLoad();
  
  setTimeout(() => {
    this.loading = false;
