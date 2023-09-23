@@ -28,7 +28,7 @@ export class HomePage implements OnInit {
   ionViewDidLoad(){
    
     const interstitialConfig: AdMobFreeInterstitialConfig = {
-      id: 'ca-app-pub-8399658876994548/2740935791',
+      id: 'ca-app-pub-2833750103925166/7580584536',
       autoShow: true,
       isTesting: false
     };
@@ -44,7 +44,7 @@ export class HomePage implements OnInit {
  setTimeout(() => {
    this.loading = false;
    
-   alert("rotate_Your_Device_📲")
+  //  alert("rotate_Your_Device_📲")
 }, 2000);
   }
   
