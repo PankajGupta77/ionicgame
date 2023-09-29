@@ -28,7 +28,7 @@ export class HomePage implements OnInit {
   ionViewDidLoad(){
    
     const interstitialConfig: AdMobFreeInterstitialConfig = {
-      id: 'ca-app-pub-2833750103925166/3334217767',
+      id: 'ca-app-pub-1015384205264822/3897372278',
       autoShow: true,
       isTesting: false
     };
