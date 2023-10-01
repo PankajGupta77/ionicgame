@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://plaese.onrender.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

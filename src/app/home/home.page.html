@@ -1,9 +1,33 @@
-<div *ngIf="loading">Please wait...</div>
-<!-- <iframe id="game" frameborder="0" allow="autoplay" allowfullscreen="" seamless="" scrolling="no" 
-        src="https://skillfite.io/?site=crazygames"
-        height="100vh" width="100%" (load)="onIframeLoad()"></iframe> -->
-
-        <!-- <iframe id="game-iframe" (load)="onIframeLoad()" src="https://skillfite.io/?site=crazygames" allow=" autoplay; payment; fullscreen; microphone; clipboard-read; clipboard-write 'self' https://skillfite.io?site=crazygames" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allowfullscreen="true" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-scripts allow-same-origin allow-downloads" style="border: 0px; background-color: rgb(255, 255, 255); width: 10px; height: 10px; min-width: 100%; min-height: 100%;"></iframe> -->
-        <iframe id="game" (load)="onIframeLoad()" src="https://skillfite.io/" marginwidth="0" marginheight="0" frameborder="0" height="600" scrolling="no" width="900" style="width: 100%; height: 100%;" id="iframe-in-import" data-src="https://skillfite.io/" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
-<!-- https://www.htmlgames.com/html5-games-for-your-site/ -->
-
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+        <ion-header>
+                <ion-toolbar>
+                  <ion-buttons slot="start">
+                    <!-- <ion-icon name="film-outline"></ion-icon> -->
+                  </ion-buttons>
+                  <ion-title class="ion-text-center">Movie App</ion-title>
+                </ion-toolbar>
+              </ion-header>
+              <ion-row>
+                <ion-col size="6" *ngFor="let videoId of ApiData">
+                  <ion-card>
+                    <ion-card-header class="textcolor">
+                      {{videoId.title}}
+                    </ion-card-header>
+              
+                    <div class="iframe-container">
+                        
+                      <iframe [src]="getVideoUrl(videoId.url)" frameborder="0" allowfullscreen></iframe>
+                    </div>
+              
+                    <ion-card-content>
+                      <p> <i class="fas fa-star"></i>{{videoId.rating}}</p>
+                    </ion-card-content>
+                  </ion-card>
+                </ion-col>
+              </ion-row>
+              
+              
+</ion-content>
