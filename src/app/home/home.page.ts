@@ -25,7 +25,7 @@ export class HomePage implements OnInit {
     // this.storedId = localStorage.getItem("id");
    
     const interstitialConfig: AdMobFreeInterstitialConfig = {
-      id: 'ca-app-pub-7954042482936232/7459101580',
+      id: 'ca-app-pub-1015384205264822/6000392059',
       autoShow: true,
       isTesting: false
     };
