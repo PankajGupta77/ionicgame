@@ -32,7 +32,7 @@
               "count": 1
             },
             {
-              "xml": "<meta-data android:name=\"com.google.android.gms.ads.APPLICATION_ID\" android:value=\"ca-app-pub-1015384205264822~3410163408\" />",
+              "xml": "<meta-data android:name=\"com.google.android.gms.ads.APPLICATION_ID\" android:value=\"ca-app-pub-8867310177954132~2405421116\" />",
               "count": 1
             }
           ],
@@ -166,7 +166,7 @@
       "PACKAGE_NAME": "com.Ragdoll.Archers"
     },
     "cordova-plugin-admob-free": {
-      "ADMOB_APP_ID": "ca-app-pub-1015384205264822~3410163408",
+      "ADMOB_APP_ID": "ca-app-pub-8867310177954132~2405421116",
       "PACKAGE_NAME": "com.Ragdoll.Archers"
     },
     "cordova-plugin-device": {
