@@ -37,7 +37,7 @@ export class HomePage implements OnInit {
   
   }
   onIframeLoad() {
-    this.ionViewDidLoad()
+    // this.ionViewDidLoad()
  
  setTimeout(() => {
    this.loading = false;
