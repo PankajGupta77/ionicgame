@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.KrisMas.Mahjong" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>KrisMas Mahjong 2</name>
+<widget id="com.Snow.Rider" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Snow Rider 3D</name>
     <description>hello my team .</description>
     <author email="pg007135@gmail@gmail.com" href="https://siteplayerbrowser.blogspot.com/">developer  Team</author>
     <content src="index.html" />
