@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.Jewel.Christmas" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Jewel Christmas Story</name>
+<widget id="com.Jetpack.Heroes" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Jetpack Heroes</name>
     <description>hello my team .</description>
     <author email="pg007135@gmail@gmail.com" href="https://siteplayerbrowser.blogspot.com/">developer  Team</author>
     <content src="index.html" />
